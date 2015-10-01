@@ -1,0 +1,41 @@
+<head>
+<!-- 	<link rel='stylesheets' type='text/css' href = 'assets/stylesheets/application.css'> -->
+<style media = 'screen' type = 'text/css'>
+
+h1 {
+	font-family:Courier;
+}
+
+/*body {
+	-webkit-column-count: 3;
+	column-fill: initial ;
+}
+*/
+</style>
+</head>
+
+<body>
+<h1 style = "color:purple">Users</h1>
+<% @users.each do |u| %>
+	<div><h4><%= u.id %>. <%= u.username %></h4></div>
+<% end %>
+
+
+<h1 style="color:red">Cats</h1>
+<img src="https://pbs.twimg.com/profile_images/616542814319415296/McCTpH_E.jpg" width='60px' height='60px'>
+<% @cat.each do |c| %>
+	<div><h4><%= c.id %>. <%= c.name %></h4></div>
+<% end %>
+
+
+<h1 style="color:pink">Finished Todos</h1>
+<% @finished.each do |t| %>
+	<div><h4><%= t.id %>. <%= t.tasks %></h4></div>
+<% end %>
+
+<h1 style="color:pink">Todo Still</h1>
+<% @unfinished.each do |t| %>
+	<div><h4><%= t.id %>. <%= t.tasks %></h4></div>
+<% end %>
+
+</body>
